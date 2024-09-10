@@ -58,6 +58,6 @@ jobs:
         script: |
           docker stop campeonato
           docker rm --force campeonato
-          docker run  -d -p 8080:8080 --name campeonato ezambomsantana/campeonato-ci
+          docker run  -d -p 8080:8080 --name campeonato ezambomsantana/campeonato-ci:${{ github.sha }}
 
           
